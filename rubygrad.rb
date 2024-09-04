@@ -61,6 +61,10 @@ class Value
     self + (-other)
   end
 
+  def -@
+    Value.new(-@data, '', '-', [self])
+  end
+
   def tanh
     x = @data
     t = (Math.exp(2 * x) - 1) / (Math.exp(2 * x) + 1)
